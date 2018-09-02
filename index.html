@@ -12,6 +12,43 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
-    </body>
+       <h1>Hello! this is my second project</h1>
+       <h3 id="message"></h3>
+       <form id='sign-up' class='border'>
+         <fieldset>
+            <legend>Sign Up</legend>
+            <input type="email" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <button type="submit">Sign Up</button>
+         </fieldset>
+      </form>
+      <form id='sign-in' class='boder'>
+         <fieldset>
+            <legend>Sign In</legend>
+            <input type="email" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="password">
+            <button type="submit">Sign In</button>
+         </fieldset>
+      </form>
+      <form class='hidden' id="change-password">
+         <fieldset>
+            <legend>Change Password</legend>
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+            <input type="password" name="passwords[new]" placeholder="New Password">
+            <button type="submit">Change Password</button>
+         </fieldset>
+      </form>
+
+          <div>
+             <button id="getFoodsButton" class="btn btn-default">Get Foods!</button>
+             <button id="clearFoodsButton" class="btn btn-default">Clear Foods!</button>
+
+           </div>
+         <main>
+             <div id="content" class="content"></div>
+         </main>
+
+
+       </body>
 </html>

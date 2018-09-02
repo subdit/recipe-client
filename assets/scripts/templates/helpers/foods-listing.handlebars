@@ -1,0 +1,19 @@
+{{#each foods as |food|}}
+  <!--{{log food}}
+  {{> partial}}
+  <!- Don't uncomment yet -->
+
+  <section data-id ="{{food.id}}">
+    <h1 data-id="{{food.id}}"> <small>Title: {{food.title}}</small></h1>
+    {{#if food.author}}
+      {{food.author}}
+      <!--<img src="{{book.img}}" // to get image-->
+
+    {{else}}
+      No author provided.
+    {{/if}}
+    <button id='removeFoodsButton'>Remove</button>
+
+  </section>
+
+{{/each}}
