@@ -12,4 +12,5 @@ const store = require('./store.js')
 $(() => {
   // your JS code goes here
   auth.addHandlers()
+  
 })
