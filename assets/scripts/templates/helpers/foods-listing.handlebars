@@ -1,19 +1,40 @@
+<!--From handlebar Example class -->
+
 {{#each foods as |food|}}
-  <!--{{log food}}
-  {{> partial}}
-  <!- Don't uncomment yet -->
+  {{log goal}}
 
-  <section data-id ="{{food.id}}">
-    <h1 data-id="{{food.id}}"> <small>Title: {{food.title}}</small></h1>
-    {{#if food.author}}
-      {{food.author}}
-      <!--<img src="{{book.img}}" // to get image-->
+  <div class="handlebar">
+  <h1 data-id="{{food.id}}"> <small>Title: {{food.title}}</small></h1>
+  <h2 data-id="{{food.id}}"> <small>Description: {{food.description}}</small></h2>
+  <button class="btn btn-default remove-button" data-id="{{food.id}}">Remove Food!</button>
+  <!-- <button class="btn btn-default update-button" data-id="{{goal.id}}">Update Food!</button> -->
+  </div>
 
-    {{else}}
-      No author provided.
-    {{/if}}
-    <button id='removeFoodsButton'>Remove</button>
+  <div class="handlebar">
 
-  </section>
+    <form class="form-updatefood" data-id="{{food.id}}">
+
+      <h4> Updating your own food now! </h4>
+
+      <div>
+
+        <label>Food Recipe</label>
+        <input type="text" class="form-control" name="food[name]" placeholder="Name your Food" required="true">
+
+      </div>
+
+      <div>
+
+        <label>Description</label>
+        <input type="text" class="form-control" name="food[description]" placeholder="Describe your food here..." required="true">
+
+        <button data-id="update-food" type="submit" class="btn btn-primary">Update your Food</button>
+
+      </div>
+
+    </form>
+  </div>
+
+  <hr>
 
 {{/each}}

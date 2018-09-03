@@ -1,6 +1,9 @@
 'use strict'
+const store = require('./store')
 
 const showFoodsTemplate = require('../templates/food-listing.handlebars')
+
+
 
 const getFoodsSuccess = (data) => {
   // console.log(data)

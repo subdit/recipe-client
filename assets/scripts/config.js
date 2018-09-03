@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: '<https://git.heroku.com/enigmatic-tor-32625.git>',
+  production: '<https://enigmatic-tor-32625.herokuapp.com>',
   development: 'http://localhost:4741'
 }
 

@@ -11,6 +11,30 @@ const store = require('./store.js')
 
 $(() => {
   // your JS code goes here
-  auth.addHandlers()
-  
+  // your JS code goes here
+  $('#change-password').hide()
+  $('#sign-out').hide()
+  $('#form-createFood').hide()
+  $('#get-allFoods').hide()
+  $('#form-updateFood').hide()
+  $('.pass-change').hide()
+
+  // ADD AUTH
+  $('#form-signUp').on('submit', foodsEvents.onFormSignUp)
+  $('#form-signIn').on('submit', foodsEvents.onFormSignIn)
+  $('#change-password').on('submit', foodsEvents.onChangePassword)
+  $('#sign-out').on('click', foodsEvents.onSignOut)
+
+  // ADD RESOURCE
+  $('#form-createFood').on('submit', foodsEvents.onCreateFood)
+  $('#get-allFoods').on('click', foodsEvents.onShowAllFoods)
+  $('#food-content').on('click', '.remove-button', goalsEvents.onDeleteShownFoods)
+
+  // $('#food-content').on('click', '.update-button', foodsEvents.openUpdateform)
+  // $('#food-content').on('click', '.update-button', function (event) {
+  //   debugger
+  //   $('#form-updateFood').show()
+  // })
+  $('#food-content').on('submit', '.form-updatefood', foodsEvents.onUpdateShownFoods)
+
 })
