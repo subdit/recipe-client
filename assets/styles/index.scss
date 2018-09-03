@@ -1,5 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'color';
+@import 'theme'
 
 nav {
   color: #fff;
@@ -25,7 +27,7 @@ body {
   font-size: 20px;
 }
 
-.show-goals {
+.show-foods {
   margin-left: 40px;
   margin-top: 15px;
 }

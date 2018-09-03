@@ -12,6 +12,8 @@ const store = require('./store.js')
 $(() => {
   // your JS code goes here
   // your JS code goes here
+
+
   $('#change-password').hide()
   $('#sign-out').hide()
   $('#form-createFood').hide()
@@ -28,7 +30,7 @@ $(() => {
   // ADD RESOURCE
   $('#form-createFood').on('submit', foodsEvents.onCreateFood)
   $('#get-allFoods').on('click', foodsEvents.onShowAllFoods)
-  $('#food-content').on('click', '.remove-button', goalsEvents.onDeleteShownFoods)
+  $('#food-content').on('click', '.remove-button', foodsEvents.onDeleteShownFoods)
 
   // $('#food-content').on('click', '.update-button', foodsEvents.openUpdateform)
   // $('#food-content').on('click', '.update-button', function (event) {
