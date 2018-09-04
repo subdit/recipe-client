@@ -2,9 +2,9 @@
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
-const auth = require('./auth/events')
-const config = require('./config.js')
-const store = require('./store.js')
+const foodsEvents = require('./auth/events')
+// const config = require('./config.js')
+// const store = require('./store.js')
 // const events = require('./events.js')
 // use require without a reference to ensure a file is bundled
 // require('./example')
@@ -19,8 +19,9 @@ $(() => {
   $('#get-allFoods').hide()
   $('#form-updateFood').hide()
   $('.pass-change').hide()
-const foodsEvents = {}
+
   // ADD AUTH
+  // $('#' + 'signupButton').modal('toggle')
   $('#form-signUp').on('submit', foodsEvents.onFormSignUp)
   $('#form-signIn').on('submit', foodsEvents.onFormSignIn)
   $('#change-password').on('submit', foodsEvents.onChangePassword)

@@ -1,7 +1,7 @@
 'use strict'
 
 const getFormFields = require('../../../lib/get-form-fields.js')
-const api = require('./api')
+const api = require('./api.js')
 const ui = require('./ui.js')
 
 // THIS IS AUTH EVENTS For Foods

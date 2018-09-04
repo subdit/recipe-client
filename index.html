@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Create Your Own Food</title>
+      <title>Create Your Food</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -16,6 +16,7 @@
                <a class="navbar-brand" href="#">Food Recipe</a>
             </div>
             <!-- SIGN IN FORM -->
+
             <form id="form-signIn" class="navbar-form navbar-right">
                <div class="form-group">
                   <label for="inputEmail">Email address</label>
@@ -40,7 +41,7 @@
       <div class="signup-portal">
          <h1> BEGIN YOUR INSPIRATION</h1>
          <!--<h3> Create Your Own Food </h3>-->
-         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+         <button id="signupButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
          SIGN UP NOW!</button>
       </div>
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -81,7 +82,7 @@
          <h2> Create your own food now! </h2>
          <div>
             <label>Food Name</label>
-            <input type="text" class="form-control" name="food[name]" placeholder="Name your food" required="true">
+            <input type="string" class="form-control" name="food[name]" placeholder="Name your food" required="true">
          </div>
          <div>
             <label>Description</label>

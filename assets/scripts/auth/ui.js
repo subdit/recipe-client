@@ -2,6 +2,7 @@
 const store = require('../store')
 const showFoodsTemplate = require('../templates/helpers/foods-listing.handlebars')
 
+// const event = require('.events.js')
 // Response Message for User when SIGN UP
 const signUpSuccess = function (data) {
   $('#user-message-signUp').html('You are Sign Up!').fadeIn().delay(3000).fadeOut()
