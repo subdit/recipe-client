@@ -2,7 +2,7 @@
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
-const auth = require('./auth/api/events')
+const auth = require('./auth/events')
 const config = require('./config.js')
 const store = require('./store.js')
 // const events = require('./events.js')
@@ -19,7 +19,7 @@ $(() => {
   $('#get-allFoods').hide()
   $('#form-updateFood').hide()
   $('.pass-change').hide()
-
+const foodsEvents = {}
   // ADD AUTH
   $('#form-signUp').on('submit', foodsEvents.onFormSignUp)
   $('#form-signIn').on('submit', foodsEvents.onFormSignIn)
