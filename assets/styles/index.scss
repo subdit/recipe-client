@@ -1,14 +1,14 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-@import 'color';
-@import 'theme'
+// @import 'color';
+// @import 'theme';
 
 nav {
-  color: #fff;
+  color: #6699ff;
 }
 
 body {
-  text-align: left;
+  text-align: center;
 }
 
 .resource-form {

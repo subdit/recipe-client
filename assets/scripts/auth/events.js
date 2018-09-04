@@ -4,15 +4,14 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui.js')
 
-
-// THIS IS AUTH EVENTS
+// THIS IS AUTH EVENTS For Foods
 const onGetFoods = (event) => {
   event.preventDefault()
   api.getFoods()
     .then(ui.getFoodsSuccess)
     .catch(ui.failure)
 }
-$('.content').data('id') // return food id
+// $('.content').data('id') // return food id
 const onClearFoods = (event) => {
   event.preventDefault()
   ui.clearFoods()
@@ -26,9 +25,7 @@ const onRemoveFoods = (event) => {
   //  .catch(ui.failure)
 }
 
-
-
-const onFormSignUp = function(event) {
+const onFormSignUp = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.signUp(data)
@@ -37,7 +34,7 @@ const onFormSignUp = function(event) {
   // console.log(data)
 }
 
-const onFormSignIn = function(event) {
+const onFormSignIn = function (event) {
   event.preventDefault()
   // console.log(event)
   const data = getFormFields(event.target)
@@ -46,7 +43,7 @@ const onFormSignIn = function(event) {
     .catch(ui.signInFail)
 }
 
-const onChangePassword = function(event) {
+const onChangePassword = function (foodsEvents) {
   event.preventDefault()
   const data = getFormFields(event.target)
   // console.log(data)
@@ -55,7 +52,7 @@ const onChangePassword = function(event) {
     .catch(ui.changePasswordFail)
 }
 
-const onSignOut = function(event) {
+const onSignOut = function (event) {
   event.preventDefault()
   api.signOut()
     .then(ui.signOutSuccess)
@@ -63,7 +60,7 @@ const onSignOut = function(event) {
 }
 // THIS IS RESOURCE EVENTS
 
-const onCreateFood = function(event) {
+const onCreateFood = function (event) {
   event.preventDefault()
   // console.log(event)
   const data = getFormFields(event.target)
@@ -75,8 +72,8 @@ const onCreateFood = function(event) {
 
 // THIS IS HANDLEBARS FOR LISTING RESOURCE
 
-const onShowAllFoods = function(event) {
-  // console.log('onShowAllGoals')
+const onShowAllFoods = function (event) {
+  // console.log('onShowAllGoal s')
   event.preventDefault()
   api.showFoods()
     .then(ui.showFoodsSuccess)
@@ -90,8 +87,8 @@ const onDeleteShownFoods = (event) => {
   // console.log('onDeleteShownGoals')
   const foodId = $(event.target).closest('button').attr('data-id')
   // console.log(foodId)
-  api.deleteGoals(goalId)
-    .then(() => onShowAllFoods(event))
+  api.deleteFoods(foodId)
+    .then(() => { onShowAllFoods(event) })
     .catch(ui.showFoodsFail)
 }
 
@@ -121,5 +118,6 @@ module.exports = {
   onCreateFood,
   onShowAllFoods,
   onDeleteShownFoods,
-  onUpdateShownFoods
+  onUpdateShownFoods,
+  addHandlers
 }

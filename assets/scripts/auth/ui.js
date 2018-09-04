@@ -1,7 +1,6 @@
 'use strict'
-const store = require('./store')
-const showFoodsTemplate = require('../templates/food-listing.handlebars')
-
+const store = require('../store')
+const showFoodsTemplate = require('../templates/helpers/foods-listing.handlebars')
 
 // Response Message for User when SIGN UP
 const signUpSuccess = function (data) {
@@ -97,7 +96,7 @@ const showFoodsSuccess = (data) => {
     const showFoodsHtml = showFoodsTemplate({ foods: data.foods })
     $('.content').html(showFoodsHtml).fadeIn()
   } else {
-    $('.content').html('You do not have any foods yet').fadeIn().delay(1500).fadeOut()
+    $('.content').html('You dont have any foods yet').fadeIn().delay(1500).fadeOut()
   }
   // console.log(data.foods.length)
 }
