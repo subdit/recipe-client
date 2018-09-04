@@ -5,6 +5,9 @@
 
 // load manifests
 // scripts
+import 'bootstrap'
+require('babel-polyfill')
+
 require('./assets/scripts/index.js')
 
 // styles
