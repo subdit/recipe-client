@@ -27,6 +27,8 @@ const onRemoveFoods = (event) => {
 
 const onFormSignUp = function (event) {
   event.preventDefault()
+  console.log('submitted the form')
+  console.log('event.target:', event.target)
   const data = getFormFields(event.target)
   api.signUp(data)
     .then(ui.signUpSuccess)

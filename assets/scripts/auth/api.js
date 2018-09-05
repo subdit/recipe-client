@@ -20,6 +20,9 @@ const signUp = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
+    //  headers: {
+    //    'Authorization': 'Token token=' + store.user.token
+    // },
     data
   })
 }
@@ -28,6 +31,9 @@ const signIn = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
+    //  headers: {
+    //    'Authorization': 'Token token=' + store.user.token
+    //  },
     data
   })
 }
@@ -66,10 +72,11 @@ const createFoods = function (food) {
 
 // THIS IS SHOW RESOURCE HANDLEBARS
 
-const showFoods = function () {
+const showFoods = function (food) {
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/foods',
+    data: food,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
