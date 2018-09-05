@@ -18,11 +18,11 @@ const onClearFoods = (event) => {
 }
 const onRemoveFoods = (event) => {
   event.preventDefault()
-  const data = $(event.target).parent().data('id')
+  const data = $(event.target).data('id')
   console.log('click', data)
   api.deleteFoods(data)
-  //  .then(ui.removeFoodsSuccess)
-  //  .catch(ui.failure)
+    .then(ui.removeFoodsSuccess)
+    .catch(ui.removeFoodsFailure)
 }
 
 const onFormSignUp = function (event) {
@@ -109,7 +109,7 @@ const onUpdateShownFoods = (event) => {
 const addHandlers = () => {
   $('#getFoodsButton').on('click', onGetFoods)
   $('#clearFoodsButton').on('click', onClearFoods)
-  $('#content').on('click', '#removeFoodsButton', onRemoveFoods)
+  $('#content').on('click', '.remove-button', onRemoveFoods)
 }
 
 module.exports = {
