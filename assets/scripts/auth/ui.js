@@ -103,9 +103,12 @@ const showFoodsSuccess = (data) => {
   }
   // console.log(data.foods.length)
 }
+const clearFoods = () => {
+  $('.content').empty()
+}
 
 const showFoodsFail = (error) => {
-  console.error(error)
+  console.log(error(error))
 }
 
 module.exports = {
@@ -120,5 +123,6 @@ module.exports = {
   createFoodSuccess,
   createFoodFail,
   showFoodsSuccess,
-  showFoodsFail
+  showFoodsFail,
+  clearFoods
 }
