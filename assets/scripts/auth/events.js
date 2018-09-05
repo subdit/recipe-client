@@ -66,7 +66,7 @@ const onCreateFood = function (event) {
   event.preventDefault()
   // console.log(event)
   const data = getFormFields(event.target)
-  api.createFood(data)
+  api.createFoods(data)
     .then(ui.createFoodSuccess)
     .catch(ui.createFoodFail)
   // console.log(data)
