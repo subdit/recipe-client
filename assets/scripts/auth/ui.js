@@ -83,6 +83,7 @@ const signOutFail = function (data) {
 
 const createFoodSuccess = function (data) {
   $('#create-food-message').html('You have Successfully created your Food').fadeIn().delay(3000).fadeOut()
+  $('#form-createFood').show()
   document.getElementById('form-createFood').reset()
 }
 const createFoodFail = function (data) {
@@ -98,6 +99,7 @@ const showFoodsSuccess = (data) => {
     $('.content').html(showFoodsHtml).fadeIn()
   } else {
     $('.content').html('You dont have any foods yet').fadeIn().delay(1500).fadeOut()
+    $('#get-allFoods').show()
   }
   // console.log(data.foods.length)
 }

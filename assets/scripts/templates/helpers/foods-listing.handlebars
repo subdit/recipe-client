@@ -1,13 +1,13 @@
 <!--From handlebar Example class -->
 
 {{#each foods as |food|}}
-  {{log goal}}
+  {{log food}}
 
   <div class="handlebar">
-  <h1 data-id="{{food.id}}"> <small>Title: {{food.title}}</small></h1>
+  <h1 data-id="{{food.id}}"> <small>Name: {{food.name}}</small></h1>
   <h2 data-id="{{food.id}}"> <small>Description: {{food.description}}</small></h2>
   <button class="btn btn-default remove-button" data-id="{{food.id}}">Remove Food!</button>
-  <!-- <button class="btn btn-default update-button" data-id="{{goal.id}}">Update Food!</button> -->
+  <!-- <button class="btn btn-default update-button" data-id="{{food.id}}">Update Food!</button> -->
   </div>
 
   <div class="handlebar">
@@ -27,8 +27,12 @@
 
         <label>Description</label>
         <input type="text" class="form-control" name="food[description]" placeholder="Describe your food here.." required="true">
-
+        <label>Status</label>
+        <input type="text" class="form-control" name="food[description]" placeholder="State your food status here..." required="true">
         <button data-id="update-food" type="submit" class="btn btn-primary">Update your Food</button>
+
+      </div>
+      <div>
 
       </div>
 
