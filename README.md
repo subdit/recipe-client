@@ -1,74 +1,47 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+## Food Recipe Client ##
+The recipe-client repository of this full stack web application directly to serve the users. The purpose of this application is to allow the users to create their own food recipe. The users must create the account by signup and signin then the app will allow the users to be able to create the food and view all the foods from database.
 
-# browser-template
+## The Main Concept ##
+The main reason behide this project was from my inspiration and passion of cooking, which I have been cooking for the past 18 years as my profession. I want to keep all the recipes from my own experience and write it down where I can share with whoever has a passion in cooking. The most important thing is the users itself to be able to create their own and share with other. The extra features of this app is allows the users to update and delete their own items.
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+## User Stories ##
+1. As a user, I want to be able to create a new food recipes.
+2. As a user, I want to be able to create and update a food.
+3. As a user, I want to be able to delete a food that I have created..
+4. As a user, I want to be able to share my food.
+5. As a user, I want to be able to view all the food from other that have created.
 
-## Installation
+## Wireframe ##
+link:https://imgur.com/a/queJB8L
 
-1. [Download](../../archive/master.zip) this template.
-1. Move to the `wdi/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
-1. Rename the template directory from `browser-template-master` to
-    `<project-name>-client`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `ga-wdi-boston.browser-template` with the name of
-    your project.
-1. Move into the new project and `git init`.
-1. Add all of the files in your project with the command `git add --all`.
-      - **Note: This is the only time you should run this command!**
-1. Commit all of your files with the command `git commit`.
-      - Your commit title should read `Initial commit`.
-1. Install dependencies with `npm install`.
-1. Create a new repository on [github.com](https://github.com),
-    _not GitHub Enterprise_.
-1. Name the new repository with the same name used on Step 3.
+## Planning and Scheduling ##
+I start with these 2 links
+:https://git.generalassemb.ly/ga-wdi-boston/full-stack-project-practice
+:https://git.generalassemb.ly/ga-wdi-boston/full-stack-project-modeling-lab
+Download this link template:https://git.generalassemb.ly/ga-wdi-boston/rails-api-template/archive/master.zip
+My stategy in this project was to set up the backend first, which I have to create the Github repository API-client to support the frontend-client application and setup Rails-Heroku to support the database. Once the backend finished, I moved to the client side or the users features. I build the frontend application in the based of MVP by created the auth and the CRUD.
+After that I explored and use Boostrap to import my style to customize my features in HTML file.
 
-## Structure
+## List of Technology Used ##
+The technology that I used to build this frontend application are Javascript, HTML5 and CSS including Boostrap. I love to play around with Boostrap because it allows me to use a lot of features such as modals section, navbar and hover effects. Handlebar is one of my fravorite tool that I love to use, which is very helpful and useful for this project.
+link: https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
+    : https://www.w3schools.com/bootstrap/bootstrap_modal.asp
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/index.js`](assets/scripts/index.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+## API ##
+The backend link that support frontend application.
+https://enigmatic-tor-32625.herokuapp.com/
 
-Developers should set `apiUrls.production` and `apiUrls.development` in
-[`config/environment.js`](config/environment.js).  With
-`apiUrls` set, developers may rely on `apiUrl` as the base for API
-URLs.
+## Deployed Link ##
+The deploy link to the client side:https://subdit.github.io/recipe-client/
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss). Bootstrap version 3 is
-included in this template.
+## The most challenging in this project ##
+One of the most challenging in this project was downloading the template, which I had the most difficult time to get the right version to make it work for Boostrap. The second challenging was setting up the rails-heroku for development side and link it with client production side.
+   Tips: pay attention to small little symbols it can break your codes.
 
-Developers should use [getFormFields](get-form-fields.md) to retrieve form data
-to send to an API.
+## Additional Resources:
+Heroku Command Line: https://devcenter.heroku.com/categories/command-line
+Heroku Rails Deployment: https://devcenter.heroku.com/articles/getting-started-with-rails5
 
-To deploy a browser-template based SPA, run `grunt deploy`.
-
-## Tasks
-
-Developers should run these often!
-
-- `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
-- `grunt make-standard`: reformats all your code in the JavaScript Standard Style
-- `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt test`: runs any automated tests, depends on `grunt build`
-- `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
-
-## Additional Resources
-
-- [Modern Javascript Explained for Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
-- [Making Sense of Front End Build Tools](https://medium.freecodecamp.org/making-sense-of-front-end-build-tools-3a1b3a87043b)
-
-## [License](LICENSE)
-
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+## License
+All content is licensed under a CC­BY­NC­SA 4.0 license.
+All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
