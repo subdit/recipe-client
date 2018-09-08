@@ -53,6 +53,10 @@ body {
 .content {
   margin-left: 40px;
 }
+.navbar-brand {
+  text-underline-position: auto;
+  text-align: justify;
+}
 
 .btn-primary:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);

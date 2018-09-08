@@ -29,10 +29,12 @@ link: https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
 
 ## API ##
 The backend link that support frontend application.
-https://enigmatic-tor-32625.herokuapp.com/
+Deployed: https://enigmatic-tor-32625.herokuapp.com/
+Repo: https://github.com/subdit/recipe-api
 
 ## Deployed Link ##
 The deploy link to the client side:https://subdit.github.io/recipe-client/
+Repo: https://github.com/subdit/recipe-client
 
 ## The most challenging in this project ##
 One of the most challenging in this project was downloading the template, which I had the most difficult time to get the right version to make it work for Boostrap. The second challenging was setting up the rails-heroku for development side and link it with client production side.
