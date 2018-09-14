@@ -12,8 +12,8 @@ const signUpSuccess = function (data) {
 
 const signUpFail = function (data) {
   // console.log(data)
-  $('#form-signUp input').val('')
   $('#user-message-signUp').html('not what you expected, try again!')
+  $('#form-signUp input').val('')
 }
 
 // Response Message for User when SIGN IN
@@ -108,7 +108,8 @@ const clearFoods = () => {
 }
 
 const showFoodsFail = () => {
-  $('#user-message-Unsuccess-create-food').html('Your Food was not successfully shown')// console.log(error(error))
+  $('#user-message-Unsuccess-create-food').html('Your Food was not successfully shown')
+  // console.log(error(error))
 }
 
 module.exports = {
