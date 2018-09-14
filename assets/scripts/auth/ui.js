@@ -6,13 +6,13 @@ const showFoodsTemplate = require('../templates/helpers/foods-listing.handlebars
 // Response Message for User when SIGN UP
 const signUpSuccess = function (data) {
   $('#user-message-signUp').html('You are Sign Up!').fadeIn().delay(3000).fadeOut()
-  document.getElementById('form-signUp').reset()
+  $('#form-signUp input').val('')
   // console.log(data)
 }
 
 const signUpFail = function (data) {
   // console.log(data)
-  document.getElementById('form-signUp').reset()
+  $('#form-signUp input').val('')
   $('#user-message-signUp').html('not what you expected, try again!')
 }
 
@@ -37,8 +37,8 @@ const signInSuccess = function (response) {
   $('.content').html('')
 }
 
-const signInFail = function (error) {
-  console.log(error)
+const signInFail = function () {
+  // console.log(error)
   document.getElementById('form-signIn').reset()
   $('#user-message-signIn').html('not what you expected, try again!')
 }
@@ -107,8 +107,8 @@ const clearFoods = () => {
   $('.content').empty()
 }
 
-const showFoodsFail = (error) => {
-  console.log(error(error))
+const showFoodsFail = () => {
+  $('#user-message-Unsuccess-create-food').html('Your Food was not successfully shown')// console.log(error(error))
 }
 
 module.exports = {

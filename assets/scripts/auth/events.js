@@ -19,7 +19,7 @@ const onClearFoods = (event) => {
 const onRemoveFoods = (event) => {
   event.preventDefault()
   const data = $(event.target).data('id')
-  console.log('click', data)
+  // console.log('click', data)
   api.deleteFoods(data)
     .then(ui.removeFoodsSuccess)
     .catch(ui.removeFoodsFailure)
@@ -27,8 +27,8 @@ const onRemoveFoods = (event) => {
 
 const onFormSignUp = function (event) {
   event.preventDefault()
-  console.log('submitted the form')
-  console.log('event.target:', event.target)
+  // console.log('submitted the form')
+  // console.log('event.target:', event.target)
   const data = getFormFields(event.target)
   api.signUp(data)
     .then(ui.signUpSuccess)
@@ -110,6 +110,11 @@ const addHandlers = () => {
   $('#getFoodsButton').on('click', onGetFoods)
   $('#clearFoodsButton').on('click', onClearFoods)
   $('#content').on('click', '.remove-button', onRemoveFoods)
+  // click on any button will clear out all form inputs
+  // $('body').on('click', '.cancel-btns', (event) => {
+  //   // $('form input').val('')
+  //   // console.log('any button clicked')
+  // })
 }
 
 module.exports = {

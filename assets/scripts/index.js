@@ -38,4 +38,8 @@ $(() => {
   //   $('#form-updateFood').show()
   // })
   $('#food-content').on('submit', '.form-updatefood', foodsEvents.onUpdateShownFoods)
+  $('body').on('click', '.cancel-btns', (event) => {
+    $('form input').val('')
+    // console.log('any button clicked')
+  })
 })
