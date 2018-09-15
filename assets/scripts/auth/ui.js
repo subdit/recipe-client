@@ -23,6 +23,7 @@ const signInSuccess = function (response) {
   // console.log(response.user)
   document.getElementById('form-signIn').reset()
   $('#user-message-signIn').html('You are sign In!')
+
   // $('#myModal').modal('hide')
   $('#change-password').show()
   $('#sign-out').show()

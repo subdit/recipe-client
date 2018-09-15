@@ -24,6 +24,14 @@ const onRemoveFoods = (event) => {
     .then(ui.removeFoodsSuccess)
     .catch(ui.removeFoodsFailure)
 }
+const onUpdateFoods = (event) => {
+  event.preventDefault()
+  const data = $(event.target).data('id')
+  // console.log('click', data)
+  api.updateFoods(data)
+    .then(ui.updateFoodsSuccess)
+    .catch(ui.updateFoodsFailure)
+}
 
 const onFormSignUp = function (event) {
   event.preventDefault()
@@ -126,5 +134,7 @@ module.exports = {
   onShowAllFoods,
   onDeleteShownFoods,
   onUpdateShownFoods,
-  addHandlers
+  onRemoveFoods,
+  addHandlers,
+  onUpdateFoods
 }
